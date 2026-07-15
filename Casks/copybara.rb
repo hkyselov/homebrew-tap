@@ -2,7 +2,8 @@ cask "copybara" do
   version "1.0.1"
   sha256 "821d604f58afe5c48be1b0cedce776ff2c343962042b1ed6d5d34257e9e2e9c0"
 
-  url "https://github.com/hkyselov/copybara/releases/download/v#{version}/Copybara-#{version}-universal.dmg"
+  url "https://github.com/hkyselov/copybara/releases/download/v#{version}/Copybara-#{version}-universal.dmg",
+      verified: "github.com/hkyselov/copybara/"
   name "Copybara"
   desc "Lightweight clipboard manager for the menu bar"
   homepage "https://hkyselov.github.io/copybara/"
