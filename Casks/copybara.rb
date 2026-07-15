@@ -26,9 +26,9 @@ cask "copybara" do
 
   caveats <<~EOS
     Copybara is not notarized (open-source project without an Apple Developer
-    account). If you installed without --no-quarantine, macOS will block the
-    first launch; approve it via System Settings → Privacy & Security →
-    "Open Anyway", or clear the quarantine flag:
+    account), so macOS will block the first launch. Approve it via
+    System Settings → Privacy & Security → "Open Anyway", or clear the
+    quarantine flag:
 
       xattr -cr /Applications/Copybara.app
 

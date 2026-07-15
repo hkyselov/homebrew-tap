@@ -5,10 +5,16 @@ Personal [Homebrew](https://brew.sh) tap for [Copybara](https://github.com/hkyse
 ## Install
 
 ```bash
-brew install --cask hkyselov/tap/copybara --no-quarantine
+brew install --cask hkyselov/tap/copybara
 ```
 
-`--no-quarantine` is recommended: Copybara is not notarized, and the flag skips the Gatekeeper "Open Anyway" step on first launch.
+Copybara is not notarized, so macOS blocks the first launch. Either approve it under **System Settings → Privacy & Security → "Open Anyway"**, or clear the quarantine flag after installing:
+
+```bash
+xattr -cr /Applications/Copybara.app
+```
+
+(Homebrew used to offer `--no-quarantine` to skip this, but the flag was removed in Homebrew 6.)
 
 ## Update
 
